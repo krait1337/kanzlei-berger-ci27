@@ -1,0 +1,10 @@
+name: Kanzlei Berger CI
+on: [push]
+jobs:
+  begruessung:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Secret ausgeben
+        env:
+          NACHRICHT: ${{ secrets.BEGRUESSUNG }}
+        run: echo "Die Nachricht wurde sicher geladen."
